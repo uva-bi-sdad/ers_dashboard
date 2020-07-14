@@ -33,7 +33,7 @@ vignettes/*.pdf
 *.knit.md
 
 .DS_Store
-
+*.RDS
 *.RData
 *.Ruserdata
 data/
