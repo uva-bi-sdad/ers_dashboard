@@ -36,7 +36,8 @@ vignettes/*.pdf
 *.RDS
 *.RData
 *.Ruserdata
-data/
+# data/
 *.dbf
 *.[cC][sS][vV]
 
+.Rproj.user
