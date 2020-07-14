@@ -1,0 +1,11 @@
+[
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "mapLevelData",
+    "id": "var1",
+    "legendTitle": "Population Low Access %",
+    "mapTitle": "Population, low access to store (%), 2010",
+    "column": "PCT_LACCESS_POP10",
+    "label": "Population %"
+  }
+]

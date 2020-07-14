@@ -1,0 +1,115 @@
+setMapReactives <- function(data = data.table(),
+                            map_level_choice = "",
+                            map_state_choice = "",
+                            map_county_choice = "",
+                            map_poly_data_choice_pct = TRUE,
+                            map_poly_data_choice = "",
+                            map_poly_data_source = "",
+                            map_poly_data_table = "",
+                            map_point_data_choice = "",
+                            map_params_co_fips = "",
+                            map_params_geoid = "",
+                            map_params_title = "",
+                            map_params_legend_title = "",
+                            map_params_data_col = "TOT",
+                            map_params_id_col = "",
+                            map_params_name_col = "",
+                            map_params_label_col = "",
+                            map_params_view_long = "",
+                            map_params_view_lat = "",
+                            map_params_view_zoom = "",
+                            map_params_palette = "Blue") {
+  reactiveValues(
+    data = data,
+    map_level_choice = map_level_choice,
+    map_state_choice = map_state_choice,
+    map_county_choice = map_county_choice,
+    map_poly_data_choice_pct = map_poly_data_choice_pct,
+    map_poly_data_choice = map_poly_data_choice,
+    map_point_data_choice = map_point_data_choice,
+    map_poly_data_source = map_poly_data_source,
+    map_poly_data_table = map_poly_data_table,
+    map_params_co_fips = map_params_co_fips,
+    map_params_geoid = map_params_geoid,
+    map_params_title = map_params_title,
+    map_params_legend_title = map_params_legend_title,
+    map_params_data_col = map_params_data_col,
+    map_params_id_col = map_params_id_col,
+    map_params_name_col = map_params_name_col,
+    map_params_label_col = map_params_label_col,
+    map_params_view_long = map_params_view_long,
+    map_params_view_lat = map_params_view_lat,
+    map_params_view_zoom = map_params_view_zoom,
+    map_params_palette = map_params_palette
+  )
+}
+
+printMapReactives <- function(map_values) {
+  #print(paste0("map_values$data=", map_values$data))
+  print(paste0("map_values$map_level_choice=", map_values$map_level_choice))
+  print(paste0("map_values$map_state_choice=", map_values$map_state_choice))
+  print(paste0("map_values$map_county_choice=", map_values$map_county_choice))
+  print(paste0("map_values$map_polygon_data_choice=", map_values$map_polygon_data_choice))
+  print(paste0("map_values$map_poly_data_choice=", map_values$map_poly_data_choice))
+  print(paste0("map_values$map_polygon_data_choice_pct=", map_values$map_polygon_data_choice_pct))
+  print(paste0("map_values$map_point_data_choice=" ,map_values$map_point_data_choice))
+  print(paste0("map_values$map_params_co_fips=", map_values$map_params_co_fips))
+  print(paste0("map_values$map_params_title=", map_values$map_params_title))
+  print(paste0("map_values$map_params_legend_title=", map_values$map_params_legend_title))
+  print(paste0("map_values$map_params_data_col=", map_values$map_params_data_col))
+  print(paste0("map_values$map_params_id_col=", map_values$map_params_id_col))
+  print(paste0("map_values$map_params_name_col=", map_values$map_params_name_col))
+  print(paste0("map_values$map_params_label_col=", map_values$map_params_label_col))
+  print(paste0("map_values$map_params_view_long=", map_values$map_params_view_long))
+  print(paste0("map_values$map_params_view_lat=", map_values$map_params_view_lat))
+  print(paste0("map_values$map_params_view_zoom=", map_values$map_params_view_zoom))
+  print(paste0("map_values$map_params_palette=", map_values$map_params_palette))
+}
+
+setGraphReactives <- function(data = data.table(),
+                              graph_level_choice = "",
+                              graph_level_data_choice_x = "",
+                              graph_level_data_choice_y = "",
+                              graph_level_data_choice_z = "",
+                              graph_params_title = "",
+                              graph_params_data_col_x = "",
+                              graph_params_data_col_x_label = "",
+                              graph_params_data_col_x_pct = TRUE,
+                              graph_params_data_col_y = "",
+                              graph_params_data_col_y_label = "",
+                              graph_params_data_col_y_pct = TRUE,
+                              graph_params_data_col_z = "",
+                              graph_params_data_col_z_label = "",
+                              graph_params_data_col_z_pct = TRUE,
+                              graph_params_id_col_x = "",
+                              graph_params_id_col_y = "",
+                              graph_params_id_col_z = "",
+                              graph_params_name_col_x = "",
+                              graph_params_name_col_y = "",
+                              graph_params_name_col_z = "",
+                              graph_correlation_coefficient = 0) {
+  reactiveValues(
+    data = data,
+    graph_level_choice = graph_level_choice,
+    graph_level_data_choice_x = graph_level_data_choice_x,
+    graph_level_data_choice_y = graph_level_data_choice_y,
+    graph_level_data_choice_z = graph_level_data_choice_z,
+    graph_params_title = graph_params_title,
+    graph_params_data_col_x = graph_params_data_col_x,
+    graph_params_data_col_x_label = graph_params_data_col_x_label,
+    graph_params_data_col_x_pct = graph_params_data_col_x_pct,
+    graph_params_data_col_y = graph_params_data_col_y,
+    graph_params_data_col_y_label = graph_params_data_col_y_label,
+    graph_params_data_col_y_pct = graph_params_data_col_y_pct,
+    graph_params_data_col_z = graph_params_data_col_z,
+    graph_params_data_col_z_label = graph_params_data_col_z_label,
+    graph_params_data_col_z_pct = graph_params_data_col_z_pct,
+    graph_params_id_col_x = graph_params_id_col_x,
+    graph_params_id_col_y = graph_params_id_col_y,
+    graph_params_id_col_z = graph_params_id_col_z,
+    graph_params_name_col_x = graph_params_name_col_x,
+    graph_params_name_col_y = graph_params_name_col_y,
+    graph_params_name_col_z = graph_params_name_col_z,
+    graph_correlation_coefficient = graph_correlation_coefficient
+  )
+}

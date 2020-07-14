@@ -1,0 +1,182 @@
+[
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Population Low Access %",
+    "mapTitle": "Population, low access to store (%), 2010",
+    "column": "PCT_LACCESS_POP10",
+    "label": "Population %"
+  },
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Low Income Low Access %",
+    "mapTitle": "Low Income, low access to store (%), 2010",
+    "column": "PCT_LACCESS_LOWI10",
+    "label": "Low Income %"
+  },
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Child Low Access %",
+    "mapTitle": "Child, low access to store (%), 2010",
+    "column": "PCT_LACCESS_CHILD10",
+    "label": "Child %"
+  },
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Seniors, Low Store Access %",
+    "mapTitle": "Seniors, low access to store (%), 2010",
+    "column": "PCT_LACCESS_SENIORS10",
+    "label": "Senior %"
+  },
+  {
+    "selectionGroup": "Low Access to Grocery Store",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Household No Car, Low Store Access %",
+    "mapTitle": "Households, no car & low access to store (%), 2010",
+    "column": "PCT_LACCESS_HHNV10",
+    "label": "Household No Car %"
+  },
+  {
+    "selectionGroup": "Food Subsidy",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Students Eligible Reduced Price Lunch %",
+    "mapTitle": "Students eligible for reduced price lunch (%), 2010",
+    "column": "PCT_REDUCED_LUNCH10",
+    "label": "Reduced Lunch %"
+  },
+  {
+    "selectionGroup": "Food Subsidy",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Students Eligible Free Lunch %",
+    "mapTitle": "Students eligible for free lunch (%), 2010",
+    "column": "PCT_FREE_LUNCH10",
+    "label": "Free Lunch %"
+  },
+  {
+    "selectionGroup": "Food Subsidy",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Household SNAP %",
+    "mapTitle": "Households Receiving SNAP Benefits (%), Census 2013",
+    "column": "HouseholdSNAPPercent",
+    "label": "Household SNAP %"
+  },
+  {
+    "selectionGroup": "Health",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Obesity 20yrs+ %",
+    "mapTitle": "Obese Persons 20 Years and Over (%), 2015",
+    "column": "SE_T012_003",
+    "label": "Obesity %"
+  },
+  {
+    "selectionGroup": "Health",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Adult Diabetics %",
+    "mapTitle": "Adult Diabetics (%), 2015",
+    "column": "SE_T009_001",
+    "label": "Diabetes %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "HS Graduation Rate",
+    "mapTitle": "HS Graduation Rate Estimate (%), Census 2016",
+    "column": "Graduation Rate",
+    "label": "High School Grad Rate %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Less Than 9 Grade",
+    "mapTitle": "Less Than 9 Grade (%), Census 2013",
+    "column": "LessThan9Grade",
+    "label": "Less Than 9 Grade %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "No HS Diploma",
+    "mapTitle": "No High School Diploma (%), Census 2013",
+    "column": "NoHSDiploma",
+    "label": "No HS Diploma %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "HS Graduation",
+    "mapTitle": "High School Graduation (%), Census 2013",
+    "column": "HighSchool",
+    "label": "Highest: HS Grad %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Some College",
+    "mapTitle": "Some College (%), Census 2013",
+    "column": "SomeCollege",
+    "label": "Highest: Some College %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "BA or BS",
+    "mapTitle": "BA or BS (%), Census 2013",
+    "column": "BAorBS",
+    "label": "Highest: BA or BS %"
+  },
+  {
+    "selectionGroup": "Education",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Graduate or Professional",
+    "mapTitle": "Graduate or Professional (%), Census 2013",
+    "column": "GradOrProff",
+    "label": "Highest: Grad or Prof %"
+  },
+  {
+    "selectionGroup": "Demographics",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Population 2013",
+    "mapTitle": "Census Population Esitmate, 2103",
+    "column": "TotalPopulation",
+    "label": "Total Population"
+  },
+  {
+    "selectionGroup": "Demographics",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Median Age 2013",
+    "mapTitle": "Census Median Age Esitmate, 2103",
+    "column": "MedianAge",
+    "label": "Median Age"
+  },
+  {
+    "selectionGroup": "Demographics",
+    "selectionSubGroup": "map_level2_data_choice",
+    "id": "var1",
+    "legendTitle": "Median Household Income 2013",
+    "mapTitle": "Census Median Household Income Esitmate, 2103",
+    "column": "MedianHouseholdIncome",
+    "label": "Median Household Income"
+  }
+]

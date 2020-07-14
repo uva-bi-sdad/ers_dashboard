@@ -1,0 +1,109 @@
+.shiny-input-radiogroup {
+  margin-top: -10px;
+  margin-bottom: -2px;
+}
+.shiny-input-radiogroup {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.menuTitle {
+  padding-left:12px ;
+  padding-top:5px;
+  padding-bottom:5px;
+  font-weight:bold;
+  background-color: #303f46;
+  border-top: 3px double #8c8b8b;
+  border-bottom: 3px double #8c8b8b;
+}
+.countySelect {
+  padding-left:12px;
+  /*background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;*/
+  background-color: #222d32;
+  height: 29px;
+  overflow: hidden;
+}
+.countySelect select {
+  border-color: #A9A9A9;
+  width: 195px;
+}
+.countySelect:hover select {
+  border: thin solid lightblue;
+}
+.mapLevelButton {
+  padding-left:12px;
+  margin-left:12px;
+  background-color: #222d32;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #A9A9A9;
+  color: white;
+  text-align: left;
+  display: inline-block;
+  height: 29px;
+  width: 195px;
+  margin-bottom: 8px;
+}
+.mapLevelButton:hover {
+  border: thin solid lightblue;
+}
+.mapLevelButton:active {
+  border: thin solid red;
+}
+hr {
+  margin-bottom: 3px;
+}
+ul {
+  list-style-type:none;
+  margin-left:-30px;
+}
+li {
+  margin: 0 0 4px 0;
+}
+.radioListTitle {
+  font-weight:bold;
+  margin-left:10px;
+  margin-top:15px;
+  margin-bottom:5px;
+}
+.areaDataDiv {
+  height:350px;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+.alignright {
+  text-align: right;
+  width: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+

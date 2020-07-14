@@ -1,0 +1,98 @@
+---
+title: "Central District Households with Children Under 12 - Source: ACS 5-Year Estimates"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r cache=TRUE, echo=FALSE, message=FALSE}
+VABG <- readRDS("data/CENSUS/va_blockgroups_simplified_spdf.RDS")
+cu12 <- readRDS("data/CENSUS/cu12.RDS")
+cu12_cast <- data.table::dcast(cu12, NAMELSAD + ST_SUBST_FIPS ~ YEAR, value.var = c("VALUE", "MOE"))
+map_data <- tmaptools::append_data(VABG, cu12_cast, key.shp = "GEOID", key.data = "ST_SUBST_FIPS")
+map_data <- map_data[!is.na(map_data@data$NAMELSAD.data),]
+max_value <- max(cu12$VALUE)
+min_value <- min(cu12$VALUE)
+```
+
+## District Map (Census Block Groups)
+```{r echo=FALSE, message=FALSE}
+library(magrittr)
+
+# pal <- leaflet::colorNumeric(
+#   palette = "RdYlBu",
+#   domain = min_value:max_value)
+
+binpal <- leaflet::colorBin("viridis", min_value:max_value, 9, pretty = TRUE)
+
+# labels <- sprintf("%s: %s", map_data_2015$NAMELSAD, map_data$VALUE)
+years <- c("2015", "2014", "2013", "2012", "2011")
+map <- leaflet::leaflet(width = "900px", data = map_data)
+map <- leaflet::addProviderTiles(map = map, "CartoDB.Positron")
+for (y in years) {
+  col_name <- paste0("VALUE_", y)
+  map <- leaflet::addPolygons(map = map,
+                       smoothFactor = 0.2,
+                       weight = 1,
+                       fillOpacity = 0.7,
+                       color = "white",
+                       dashArray = "3",
+                       fillColor = ~binpal(map_data@data[, c(col_name)]),
+                       highlight = leaflet::highlightOptions(
+                         weight = 5,
+                         color = "#666",
+                         dashArray = "",
+                         fillOpacity = 0.7,
+                         bringToFront = TRUE),
+                       label = sprintf("Cnty: %s %s: %s", map_data$COUNTYFP, map_data$NAMELSAD, map_data@data[, c(col_name)]),
+                       group = y
+                       )
+}
+map <- leaflet::addLayersControl(map = map,
+    baseGroups = years,
+    position = "topleft",
+    options = leaflet::layersControlOptions(collapsed = FALSE)
+  )
+map <- leaflet::addLegend(map = map, "topright", pal = binpal, values = ~map_data@data[, c(col_name)],
+            title = "Households with Children < 12",
+            opacity = 1
+)
+map
+```
+
+## District Bar Chart (Census Block Groups)
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+library(RColorBrewer)
+# years <- c("2011", "2012", "2013", "2014", "2015")
+
+data <- data.table::setDT(map_data@data)
+colors <- brewer.pal(length(years), "Paired")
+color_idx <- 1
+
+pl <- plot_ly(data, type = 'bar', width = 900)
+for (y in years) {
+  col_name <- paste0("VALUE_", y)
+  pl <- add_trace(pl, 
+                  x = data[, .(block_groups = paste(COUNTYFP, NAMELSAD))][[1]], 
+                  y = data[, .(get(col_name))][[1]], 
+                  name = y, 
+                  marker = list(color = colors[color_idx]))
+  color_idx = color_idx + 1
+}
+pl <- layout(pl, yaxis = list(title = 'Count'), barmode = 'group', margin = list(b = 160))
+pl
+
+```
+
+## DATA
+```{r echo=FALSE, message=FALSE}
+# DT::datatable(new_new_spdf@data[,c("COUNTYFP", "NAMELSAD", "GEOID", "Female.Under.45")])
+
+DT::datatable(map_data@data[,c("COUNTYFP", "NAMELSAD", "GEOID", "VALUE_2011", "VALUE_2012", "VALUE_2013", "VALUE_2014", "VALUE_2015")],
+                  extensions = c("Buttons"), 
+                  options = list(dom = 'Bfrtip',
+                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+                  ))
+
+```

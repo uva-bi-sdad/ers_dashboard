@@ -1,0 +1,36 @@
+---
+title: "Houston Exposure"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r cache=TRUE, echo=FALSE, message=FALSE}
+my_spdf <- readRDS(file = "~/git/dashboard/data/houston_pts_spdf.RDS")
+```
+
+## District Map (Census Block Groups)
+```{r echo=FALSE, message=FALSE}
+library(magrittr)
+
+pal <- leaflet::colorNumeric(
+  palette = "RdYlBu",
+  domain = my_spdf@data$exposure_ppb)
+
+binpal <- leaflet::colorBin("RdYlBu", my_spdf@data$exposure_ppb, 10, pretty = TRUE)
+
+# labels <- sprintf("County: %s, %s: %s", new_new_spdf$COUNTYFP, new_new_spdf$NAMELSAD, new_new_spdf$Female.Under.45)
+
+leaflet::leaflet(my_spdf, width = "900px") %>%
+  leaflet::addProviderTiles("CartoDB.Positron") %>%
+  leaflet::addCircleMarkers(
+    radius = 0.5,
+    color = ~pal(exposure_ppb),
+    stroke = FALSE, fillOpacity = 0.5
+  ) %>%
+  leaflet::addLegend("topright", pal = pal, values = ~exposure_ppb,
+            title = "Exposure",
+            opacity = 1
+  )
+```
+
