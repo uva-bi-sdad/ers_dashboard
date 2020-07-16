@@ -15,7 +15,7 @@ locations2FIPS <- function(idCol, lonCol, latCol) {
 location2PlaceId <- function(lon, lat, keyword) {
   keyword <- URLencode(keyword)
   url <- paste0("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=", 
-                lat, ",", lon, "&keyword=", keyword, "&key=AIzaSyCLmT3kQD4udAyLHlBaqYrBEEeX8XdZo7I")
+                lat, ",", lon, "&keyword=", keyword, "&key=")
   nearbysearch <- fromJSON(url)
   
   if (nearbysearch$status == "OK") {
